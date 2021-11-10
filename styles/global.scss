@@ -1,2 +1,11 @@
 // Import Meyerweb Reset CSS
 @import "reset.scss";
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi-Variable.ttf");
+}
+
+body {
+  font-family: "Satoshi";
+}
