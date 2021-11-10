@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  max-width: 1140px;
+  margin: auto;
+
+  ul {
+    display: flex;
+    li:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+// ######################################################################
+// ######################################################################
+// Mobile Hamburger Menu
+
+$bar-width: 30px;
+$bar-height: 2px;
+$bar-spacing: 8px;
+
+.menu {
+  display: none;
+  z-index: 1;
+}
+
+.menu,
+.menu:after,
+.menu:before {
+  width: $bar-width;
+  height: $bar-height;
+}
+
+.menu {
+  position: relative;
+  transform: translateY($bar-spacing);
+  background: #2e2b26;
+  transition: all 0ms 300ms;
+
+  &.animate {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $bar-spacing;
+  background: #2e2b26;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $bar-spacing;
+  background: #2e2b26;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+// ######################################################################
+// ######################################################################
+
+// ######################################################################
+// ######################################################################
+// Media Queries
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  .header {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      li {
+        margin-right: 0rem;
+      }
+    }
+  }
+}
