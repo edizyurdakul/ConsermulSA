@@ -3,11 +3,6 @@ import styles from "./Header.module.scss";
 import { useState } from "react";
 
 const Header = () => {
-  const [animated, setAnimated] = useState(false);
-  console.log(animated);
-  const toggleAnimated = () => {
-    setAnimated(!animated);
-  };
   return (
     <header className={styles.header}>
       <NextLink href="">Name - Logo</NextLink>
