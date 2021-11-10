@@ -6,6 +6,32 @@
   src: url("../public/fonts/Satoshi-Variable.ttf");
 }
 
+// White Theme
+
+$light-txtPrimary: #2e2b26;
+$light-txtSecondary: #848484;
+
+$light-elmntPrimary: #848484;
+$light-elmntSecondary: #c3c2c1;
+$light-elmntTertiary: #d6d6d6;
+
+$light-bgPrimary: #ffffff;
+$light-bgSecondary: #f0f0f0;
+$light-bgTertiary: #e5e5e5;
+
+// Dark Theme
+
+$dark-txtPrimary: #ffffff;
+$dark-txtSecondary: #ababab;
+
+$dark-elmntPrimary: #6b6b6b;
+$dark-elmntSecondary: #808080;
+$dark-elmntTertiary: #ababab;
+
+$dark-bgPrimary: #2e2e2e;
+$dark-bgSecondary: #424242;
+$dark-bgTertiary: #575757;
+
 body {
   font-family: "Satoshi";
 }
