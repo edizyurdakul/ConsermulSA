@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import styles from "./HomeHero.module.scss";
+import styles from "./Hero.module.scss";
 import { Button } from "../../Button";
 
 const HomeHero = () => {
