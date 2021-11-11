@@ -1,12 +1,12 @@
 import "../styles/global.scss";
-import head from "next/head";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <head>
-        <meta content="initial-scale=1.0, width=device-width" name="viewport" />
-      </head>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      </Head>
       <Component {...pageProps} />
     </>
   );
