@@ -12,37 +12,40 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
-      <NextLink href="">Name - Logo</NextLink>
-      <nav>
-        <div
-          onClick={() => {
-            toggleMenu();
-          }}
-          className={styles.hamburgerWrapper}
-        >
-          <div className={openMenu == true ? `${styles.menu} ${styles.animate}` : `${styles.menu}`}></div>
-        </div>
-        <div className={openMenu == true ? `${styles.navigationWrapper} ${styles.animated}` : `${styles.navigationWrapper}`}>
-          <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
-            <ul>
-              <li>
-                <NextLink href="">Menu Item 1</NextLink>
-              </li>
-              <li>
-                <NextLink href="">Menu Item 2</NextLink>
-              </li>
-              <li>
-                <NextLink href="">Menu Item 3</NextLink>
-              </li>
-              <li>
-                <NextLink href="">Menu Item 4</NextLink>
-              </li>
-            </ul>
+    <>
+      <header className={styles.header}>
+        <NextLink href="">Name - Logo</NextLink>
+        <nav>
+          <div
+            onClick={() => {
+              toggleMenu();
+            }}
+            className={styles.hamburgerWrapper}
+          >
+            <div className={openMenu == true ? `${styles.menu} ${styles.animate}` : `${styles.menu}`}></div>
           </div>
-        </div>
-      </nav>
-    </header>
+          <div className={openMenu == true ? `${styles.navigationWrapper} ${styles.animated}` : `${styles.navigationWrapper}`}>
+            <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
+              <ul>
+                <li>
+                  <NextLink href="">Menu Item 1</NextLink>
+                </li>
+                <li>
+                  <NextLink href="">Menu Item 2</NextLink>
+                </li>
+                <li>
+                  <NextLink href="">Menu Item 3</NextLink>
+                </li>
+                <li>
+                  <NextLink href="">Menu Item 4</NextLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div className={styles.divider}></div>
+    </>
   );
 };
 
