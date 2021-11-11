@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("../public/fonts/Satoshi-Variable.ttf");
+  src: url("/fonts/Satoshi-Variable.ttf");
 }
 
 // White Theme
@@ -33,11 +33,26 @@ $dark-bgSecondary: #424242;
 $dark-bgTertiary: #575757;
 
 body {
-  font-family: "Satoshi";
-  overflow: hidden;
+  font-family: "Satoshi", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+// Typography
+
+h1 {
+  font-size: 72px;
+  line-height: 76px;
+  letter-spacing: -0.1rem;
+  font-variation-settings: "wght" 700;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0;
 }

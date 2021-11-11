@@ -1,10 +1,11 @@
 import { Header } from "../components/Header";
-import { motion } from "framer-motion";
+import { HomeHero } from "../components/Sections";
 
 const HomePage = () => {
   return (
     <div>
       <Header />
+      <HomeHero />
       <h1>Hello World</h1>
       <br />
     </div>
