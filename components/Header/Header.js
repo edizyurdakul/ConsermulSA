@@ -1,6 +1,6 @@
 import NextLink from "next/link";
 import styles from "./Header.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -16,29 +16,15 @@ const Header = () => {
       <NextLink href="">Name - Logo</NextLink>
       <nav>
         <div
-          className={
-            openMenu == true
-              ? `${styles.menu} ${styles.animate}`
-              : `${styles.menu}`
-          }
           onClick={() => {
             toggleMenu();
           }}
-        ></div>
-        <div
-          className={
-            openMenu == true
-              ? `${styles.navigationWrapper} ${styles.animated}`
-              : `${styles.navigationWrapper}`
-          }
+          className={styles.hamburgerWrapper}
         >
-          <div
-            className={
-              openMenu == true
-                ? `${styles.navigation} ${styles.animated}`
-                : `${styles.navigation}`
-            }
-          >
+          <div className={openMenu == true ? `${styles.menu} ${styles.animate}` : `${styles.menu}`}></div>
+        </div>
+        <div className={openMenu == true ? `${styles.navigationWrapper} ${styles.animated}` : `${styles.navigationWrapper}`}>
+          <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
             <ul>
               <li>
                 <NextLink href="">Menu Item 1</NextLink>
