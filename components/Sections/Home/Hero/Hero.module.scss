@@ -1,4 +1,4 @@
-.heroWrapper {
+.wrapper {
   height: calc(100vh - 80px);
 
   .hero {
@@ -31,7 +31,7 @@
 // Media Queries
 
 @media screen and (max-width: 768px) {
-  .heroWrapper {
+  .wrapper {
     .hero {
       .heroContent {
         width: 100%;
@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .heroWrapper {
+  .wrapper {
     .hero {
       .heroContent {
         width: 100%;

@@ -4,7 +4,7 @@ import { Button } from "../../../Button";
 
 const HomeHero = () => {
   return (
-    <div className={styles.heroWrapper}>
+    <div className={styles.wrapper}>
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>It's high time you told your story</h1>
