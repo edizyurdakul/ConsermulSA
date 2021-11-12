@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 import styles from "./Hero.module.scss";
-import { Button } from "../../Button";
+import { Button } from "../../../Button";
 
 const HomeHero = () => {
   return (
