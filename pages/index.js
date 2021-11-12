@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { HomeHero, HomeAbout, HomeServices } from "../components/Sections";
+import { HomeHero, HomeAbout, HomeServices, HomeCallToAction } from "../components/Sections";
 
 const HomePage = () => {
   return (
@@ -8,6 +8,7 @@ const HomePage = () => {
       <HomeHero />
       <HomeAbout />
       <HomeServices />
+      <HomeCallToAction />
       <h1>Hello World</h1>
       <br />
     </div>
