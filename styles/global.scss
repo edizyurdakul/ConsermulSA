@@ -44,6 +44,13 @@ a {
 
 // Typography
 
+.display-1 {
+  font-size: 80px;
+  line-height: 84px;
+  letter-spacing: -0.1rem;
+  font-variation-settings: "wght" 700;
+}
+
 h1 {
   font-size: 72px;
   line-height: 76px;
@@ -69,4 +76,8 @@ p {
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0;
+}
+
+.--align-center {
+  text-align: center;
 }
