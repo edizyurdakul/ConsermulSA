@@ -134,22 +134,22 @@
   }
 
   .wrapper {
-    padding: 6.25rem 1rem;
+    padding: 6.25rem 2rem;
 
     ul {
       width: 100%;
 
       li:nth-child(1) {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
       li:nth-child(2) {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
       li:nth-child(3) {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
       li:nth-child(4) {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
     }
   }
