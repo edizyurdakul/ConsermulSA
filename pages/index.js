@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { HomeHero, HomeAbout, HomeServices, CallToAction, Numbers, Testimonials } from "../components/Sections";
+import { HomeHero, HomeAbout, HomeServices, CallToAction, Numbers, Testimonials, Gallery } from "../components/Sections";
 
 const HomePage = () => {
   return (
@@ -11,6 +11,7 @@ const HomePage = () => {
       <CallToAction />
       <Numbers />
       <Testimonials />
+      <Gallery />
       <h1>Hello World</h1>
       <br />
     </div>

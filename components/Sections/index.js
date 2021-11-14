@@ -4,3 +4,4 @@ export { default as HomeServices } from "./Home/Services";
 export { default as CallToAction } from "./CallToAction";
 export { default as Numbers } from "./Numbers";
 export { default as Testimonials } from "./Home/Testimonials";
+export { default as Gallery } from "./Home/Gallery";
