@@ -2,16 +2,32 @@ import { HomeHero, HomeAbout, HomeServices, CallToAction, Numbers, Testimonials,
 
 const HomePage = () => {
   return (
-    <div>
-      <HomeHero />
-      <HomeAbout />
-      <HomeServices />
-      <CallToAction />
-      <Numbers />
-      <Testimonials />
-      <Gallery />
-      <FAQ />
-    </div>
+    <main>
+      <section>
+        <HomeHero />
+      </section>
+      <section>
+        <HomeAbout />
+      </section>
+      <section>
+        <HomeServices />
+      </section>
+      <section>
+        <CallToAction />
+      </section>
+      <section>
+        <Numbers />
+      </section>
+      <section>
+        <Testimonials />
+      </section>
+      <section>
+        <Gallery />
+      </section>
+      <section>
+        <FAQ />
+      </section>
+    </main>
   );
 };
 

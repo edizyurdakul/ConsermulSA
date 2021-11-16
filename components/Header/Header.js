@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import NextImage from "next/image";
 import styles from "./Header.module.scss";
 import { useState } from "react";
 
@@ -13,7 +14,9 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <NextLink href="">Name - Logo</NextLink>
+        <NextLink href="">
+          <NextImage src={"/Logo.png"} width="150px" height="116px" />
+        </NextLink>
         <nav>
           <div
             onClick={() => {
@@ -27,16 +30,16 @@ const Header = () => {
             <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
               <ul>
                 <li>
-                  <NextLink href="">Menu Item 1</NextLink>
+                  <NextLink href="">Services</NextLink>
                 </li>
                 <li>
-                  <NextLink href="">Menu Item 2</NextLink>
+                  <NextLink href="">Projects</NextLink>
                 </li>
                 <li>
-                  <NextLink href="">Menu Item 3</NextLink>
+                  <NextLink href="">About</NextLink>
                 </li>
                 <li>
-                  <NextLink href="">Menu Item 4</NextLink>
+                  <NextLink href="">Contact</NextLink>
                 </li>
               </ul>
             </div>

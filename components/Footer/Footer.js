@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram } from "../Icons";
 
 const Footer = () => {
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <div className={styles.container}>
         <h3>Name - Logo</h3>
         <ul>
@@ -41,7 +41,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 };
 
