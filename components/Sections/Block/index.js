@@ -11,6 +11,8 @@ export const Block = () => {
           </div>
         </div>
         <div className={styles.right}>
+          <h2>Title</h2>
+
           <p>
             Provide your customers a story they would enjoy keeping in mind the objectives of your website. Pay special
             attention to the tone of voice. Try to win the customers' trust by being positive
@@ -26,6 +28,7 @@ export const BlockReverse = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.left}>
+          <h2>Title</h2>
           <p>
             Provide your customers a story they would enjoy keeping in mind the objectives of your website. Pay special
             attention to the tone of voice. Try to win the customers' trust by being positive

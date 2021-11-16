@@ -16,15 +16,21 @@
       height: 40vh;
       position: relative;
     }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
     .left {
       display: flex;
-      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       grid-column: 1/6;
     }
 
     .right {
       display: flex;
-      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       grid-column: 7/13;
     }
   }
