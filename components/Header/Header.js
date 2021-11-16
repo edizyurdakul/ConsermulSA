@@ -14,8 +14,10 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <NextLink href="">
-          <NextImage src={"/Logo.png"} width="150px" height="116px" />
+        <NextLink passHref href="/">
+          <a>
+            <NextImage src={"/Logo.png"} width="150px" height="116px" />
+          </a>
         </NextLink>
         <nav>
           <div
@@ -30,13 +32,13 @@ const Header = () => {
             <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
               <ul>
                 <li>
-                  <NextLink href="">Services</NextLink>
+                  <NextLink href="/services">Services</NextLink>
                 </li>
                 <li>
-                  <NextLink href="">Projects</NextLink>
+                  <NextLink href="/projects">Projects</NextLink>
                 </li>
                 <li>
-                  <NextLink href="">About</NextLink>
+                  <NextLink href="/about">About</NextLink>
                 </li>
                 <li>
                   <NextLink href="">Contact</NextLink>
