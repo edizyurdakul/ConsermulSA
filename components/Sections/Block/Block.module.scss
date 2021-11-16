@@ -17,6 +17,8 @@
       position: relative;
     }
     .left {
+      display: flex;
+      align-items: center;
       grid-column: 1/6;
     }
 

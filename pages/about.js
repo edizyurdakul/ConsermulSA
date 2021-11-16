@@ -1,4 +1,4 @@
-import { HomeAbout, CallToAction, FAQ, Team, CommonHero, Block } from "../components/Sections";
+import { HomeAbout, CallToAction, FAQ, Team, CommonHero, Block, BlockReverse } from "../components/Sections";
 
 const AboutPage = () => {
   return (
@@ -7,7 +7,10 @@ const AboutPage = () => {
         <CommonHero />
       </section>
       <section>
-        <Block order="order" />
+        <Block />
+      </section>
+      <section>
+        <BlockReverse />
       </section>
     </main>
   );
