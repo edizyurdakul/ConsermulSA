@@ -54,6 +54,13 @@
     padding: 6.25rem 4.25rem;
     .container {
       width: 540px;
+      .left {
+        grid-column: 1/13;
+      }
+
+      .right {
+        grid-column: 1/13;
+      }
     }
   }
 }
@@ -64,14 +71,20 @@
       width: 100%;
 
       .left {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
 
       .right {
-        grid-column: 1/12;
+        grid-column: 1/13;
       }
     }
 
     padding: 6.25rem 1rem;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .heroImage {
+    display: none;
   }
 }
