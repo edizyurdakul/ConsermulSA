@@ -44,6 +44,12 @@
     .container {
       width: 768px;
     }
+    .heroImage {
+      margin-top: 4rem;
+      width: 768px;
+      height: 40vh;
+      position: relative;
+    }
 
     padding: 6.25rem 4.25rem;
   }
@@ -51,7 +57,7 @@
 
 @media screen and (max-width: 820px) {
   .wrapper {
-    padding: 6.25rem 4.25rem;
+    padding: 4.25rem 4.25rem;
     .container {
       width: 540px;
       .left {
@@ -61,6 +67,9 @@
       .right {
         grid-column: 1/13;
       }
+    }
+    .heroImage {
+      width: 540px;
     }
   }
 }
@@ -79,7 +88,11 @@
       }
     }
 
-    padding: 6.25rem 1rem;
+    .heroImage {
+      width: 100%;
+    }
+
+    padding: 4.25rem 1rem;
   }
 }
 
