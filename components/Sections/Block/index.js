@@ -34,7 +34,7 @@ export const BlockReverse = () => {
             attention to the tone of voice. Try to win the customers' trust by being positive
           </p>
         </div>
-        <div className={styles.right}>
+        <div className={`${styles.right} ${styles.reverse}`}>
           <div className={styles.heroImage}>
             <NextImage src={"/placeholder.png"} layout="fill" />
           </div>

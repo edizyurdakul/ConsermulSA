@@ -73,6 +73,10 @@
         order: -1;
         grid-column: 1/13;
       }
+
+      .reverse {
+        order: 1 !important;
+      }
     }
 
     padding: 6.25rem 1rem;
