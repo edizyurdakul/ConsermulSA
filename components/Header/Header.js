@@ -1,7 +1,8 @@
 import NextLink from "next/link";
 import NextImage from "next/image";
-import styles from "./Header.module.scss";
+import { motion } from "framer-motion";
 import { useState } from "react";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -11,13 +12,30 @@ const Header = () => {
     console.log(openMenu);
   };
 
+  const ul = {
+    hidden: { opacity: 0, y: 36 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  const li = {
+    hidden: { opacity: 0, y: 36 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <header className={styles.header}>
         <NextLink passHref href="/">
-          <a>
+          <motion.a variants={li} initial="hidden" animate="show">
             <NextImage src={"/Logo.png"} width="150px" height="116px" />
-          </a>
+          </motion.a>
         </NextLink>
         <nav>
           <div
@@ -30,20 +48,20 @@ const Header = () => {
           </div>
           <div className={openMenu == true ? `${styles.navigationWrapper} ${styles.animated}` : `${styles.navigationWrapper}`}>
             <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
-              <ul>
-                <li>
+              <motion.ul variants={ul} initial="hidden" animate="show">
+                <motion.li variants={li}>
                   <NextLink href="/services">Services</NextLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={li}>
                   <NextLink href="/projects">Projects</NextLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={li}>
                   <NextLink href="/about">About</NextLink>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={li}>
                   <NextLink href="">Contact</NextLink>
-                </li>
-              </ul>
+                </motion.li>
+              </motion.ul>
             </div>
           </div>
         </nav>

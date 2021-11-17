@@ -1,4 +1,4 @@
-import { CallToAction, CommonHero, Block, BlockReverse } from "../../components/Sections";
+import { CallToAction, CommonHero, Block, BlockReverse } from "../components/Sections";
 
 const ProjectsPage = () => {
   return (
