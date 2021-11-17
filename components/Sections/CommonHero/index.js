@@ -2,7 +2,7 @@ import styles from "./CommonHero.module.scss";
 import { Button } from "../../Button";
 import NextImage from "next/image";
 
-const CommonHero = ({ title, paragraph, calltoaction }) => {
+const CommonHero = ({ title, paragraph, calltoaction, noAction }) => {
   return (
     <>
       <div className={styles.wrapper}>
@@ -12,7 +12,7 @@ const CommonHero = ({ title, paragraph, calltoaction }) => {
           </div>
           <div className={styles.right}>
             <p>{paragraph}</p>
-            <Button text={calltoaction} />
+            {noAction === "true" ? null : <Button text={calltoaction} />}
           </div>
         </div>
         <div className={styles.heroImage}>

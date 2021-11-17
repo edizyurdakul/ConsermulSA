@@ -27,10 +27,10 @@ const ServicesPage = () => {
         />
       </section>
       <section>
-        <FAQ />
+        <CallToAction />
       </section>
       <section>
-        <CallToAction />
+        <FAQ />
       </section>
     </main>
   );

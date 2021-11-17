@@ -1,42 +1,47 @@
 import styles from "./Footer.module.scss";
-import Link from "next/link";
+import NextLink from "next/link";
+import NextImage from "next/image";
 import { Facebook, Twitter, Instagram } from "../Icons";
 
 const Footer = () => {
   return (
     <footer className={styles.wrapper}>
       <div className={styles.container}>
-        <h3>Name - Logo</h3>
+        <NextLink passHref href="/">
+          <a className={styles.logo}>
+            <NextImage src={"/Logo.png"} width="150px" height="116px" />
+          </a>
+        </NextLink>
         <ul>
           <li>
             <h4>COMPANY</h4>
-            <Link href="#">About our company</Link>
-            <Link href="#">Our previous works</Link>
+            <NextLink href="#">About our company</NextLink>
+            <NextLink href="#">Our previous works</NextLink>
           </li>
           <li>
             <h4>SERVICES</h4>
-            <Link href="#">Services we provide</Link>
-            <Link href="#">Request a quote</Link>
+            <NextLink href="#">Services we provide</NextLink>
+            <NextLink href="#">Request a quote</NextLink>
           </li>
           <li>
             <h4>HELP</h4>
-            <Link href="#">Contact</Link>
+            <NextLink href="#">Contact</NextLink>
             <div className={styles.social}>
-              <Link href="#">
+              <NextLink href="#">
                 <div>
                   <Facebook />
                 </div>
-              </Link>
-              <Link href="#">
+              </NextLink>
+              <NextLink href="#">
                 <div>
                   <Twitter />
                 </div>
-              </Link>
-              <Link href="#">
+              </NextLink>
+              <NextLink href="#">
                 <div>
                   <Instagram />
                 </div>
-              </Link>
+              </NextLink>
             </div>
           </li>
         </ul>
