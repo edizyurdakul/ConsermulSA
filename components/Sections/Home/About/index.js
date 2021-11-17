@@ -1,5 +1,7 @@
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 import { Button } from "../../../Button";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import styles from "./About.module.scss";
 
 const About = () => {
@@ -21,9 +23,21 @@ const About = () => {
     show: { opacity: 1, y: 0 },
   };
 
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("show");
+    }
+    if (!inView) {
+      animation.start("hidden");
+    }
+  }, [inView]);
+
   return (
     <div className={styles.wrapper}>
-      <motion.div variants={ul} initial="hidden" animate="show" className={styles.container}>
+      <motion.div ref={ref} variants={ul} animate={animation} className={styles.container}>
         <motion.div variants={li} className={styles.left}>
           <h2>Medium length title for building block</h2>
           <Button text="Button" />
@@ -35,26 +49,26 @@ const About = () => {
           </p>
         </motion.div>
       </motion.div>
-      <div className={styles.divider}></div>
       <div>
-        <ul>
-          <li>
+        <motion.div variants={ul} animate={animation} className={styles.divider}></motion.div>
+        <motion.ul variants={ul} animate={animation}>
+          <motion.li variants={li}>
             <h3>First Advantage</h3>
             <p>Short text describing one of you product/service advantages. Try being creative</p>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={li}>
             <h3>Second Advantage</h3>
             <p>Short text describing one of you product/service advantages. Try being creative</p>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={li}>
             <h3>Third Advantage</h3>
             <p>Short text describing one of you product/service advantages. Try being creative</p>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={li}>
             <h3>Four Advantage</h3>
             <p>Short text describing one of you product/service advantages. Try being creative</p>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
     </div>
   );
