@@ -10,7 +10,7 @@ const CallToAction = () => {
         </div>
         <div className={styles.right}>
           <p>Provide some assertive title that would persuade customers to take some action, e.g, making a call, etc.</p>
-          <Button text="Button" />
+          <Button text="Get A Quote" />
         </div>
       </div>
     </div>

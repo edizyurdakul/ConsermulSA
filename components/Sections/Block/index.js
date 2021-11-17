@@ -1,7 +1,7 @@
 import styles from "./Block.module.scss";
 import NextImage from "next/image";
 
-export const Block = () => {
+export const Block = ({ title, paragraph }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -11,28 +11,22 @@ export const Block = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <h2>Title</h2>
+          <h2>{title}</h2>
 
-          <p>
-            Provide your customers a story they would enjoy keeping in mind the objectives of your website. Pay special
-            attention to the tone of voice. Try to win the customers' trust by being positive
-          </p>
+          <p>{paragraph}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export const BlockReverse = () => {
+export const BlockReverse = ({ title, paragraph }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <h2>Title</h2>
-          <p>
-            Provide your customers a story they would enjoy keeping in mind the objectives of your website. Pay special
-            attention to the tone of voice. Try to win the customers' trust by being positive
-          </p>
+          <h2>{title}</h2>
+          <p>{paragraph}</p>
         </div>
         <div className={`${styles.right} ${styles.reverse}`}>
           <div className={styles.heroImage}>
