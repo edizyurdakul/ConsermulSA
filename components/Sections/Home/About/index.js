@@ -11,8 +11,7 @@ const About = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.25,
-        delayChildren: 0.5,
+        delayChildren: 0.35,
         staggerChildren: 0.25,
       },
     },

@@ -9,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+          <link rel="preload" href="/fonts/Satoshi-Variable.ttf" as="font" crossOrigin="" type="ttf" />
+        </Head>
         <body>
           <Main />
           <NextScript />
