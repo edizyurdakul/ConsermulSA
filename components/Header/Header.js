@@ -32,11 +32,13 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <NextLink passHref href="/">
-          <motion.a variants={li} initial="hidden" animate="show">
-            <NextImage src={"/Logo.png"} width="150px" height="116px" />
-          </motion.a>
-        </NextLink>
+        <motion.div variants={li} initial="hidden" animate="show">
+          <NextLink href="/" passHref>
+            <a>
+              <NextImage src={"/Logo.png"} width="150px" height="116px" />
+            </a>
+          </NextLink>
+        </motion.div>
         <nav>
           <div
             onClick={() => {
@@ -50,16 +52,24 @@ const Header = () => {
             <div className={openMenu == true ? `${styles.navigation} ${styles.animated}` : `${styles.navigation}`}>
               <motion.ul variants={ul} initial="hidden" animate="show">
                 <motion.li variants={li}>
-                  <NextLink href="/services">Services</NextLink>
+                  <NextLink href="/services">
+                    <a>Services</a>
+                  </NextLink>
                 </motion.li>
                 <motion.li variants={li}>
-                  <NextLink href="/projects">Projects</NextLink>
+                  <NextLink href="/projects">
+                    <a>Projects</a>
+                  </NextLink>
                 </motion.li>
                 <motion.li variants={li}>
-                  <NextLink href="/about">About</NextLink>
+                  <NextLink href="/about">
+                    <a>About</a>
+                  </NextLink>
                 </motion.li>
                 <motion.li variants={li}>
-                  <NextLink href="">Contact</NextLink>
+                  <NextLink href="/contact">
+                    <a>Contact</a>
+                  </NextLink>
                 </motion.li>
               </motion.ul>
             </div>

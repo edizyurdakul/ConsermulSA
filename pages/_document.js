@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preload" href="/fonts/Satoshi-Variable.ttf" as="font" crossOrigin="" type="ttf" />
+          <link rel="preload" href="/fonts/Satoshi-Variable.ttf" as="font" crossOrigin="" />
         </Head>
         <body>
           <Main />
