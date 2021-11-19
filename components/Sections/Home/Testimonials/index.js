@@ -32,7 +32,7 @@ const Testimonials = () => {
   };
 
   const animation = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   useEffect(() => {
     if (inView) {
@@ -43,9 +43,9 @@ const Testimonials = () => {
     }
   }, [inView]);
   return (
-    <div className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper}>
       <div>
-        <motion.h2 ref={ref} variants={heading} animate={animation}>
+        <motion.h2 variants={heading} animate={animation}>
           What our clients say
         </motion.h2>
         <div>
