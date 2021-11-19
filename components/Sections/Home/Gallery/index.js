@@ -22,6 +22,17 @@ const Gallery = () => {
     show: { opacity: 1, y: 0 },
   };
 
+  const heading = {
+    hidden: { opacity: 0, y: 36 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.25,
+      },
+    },
+  };
+
   const animation = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -35,7 +46,9 @@ const Gallery = () => {
   }, [inView]);
   return (
     <div className={styles.wrapper}>
-      <h2>Gallery</h2>
+      <motion.h2 variants={heading} animate={animation}>
+        Gallery
+      </motion.h2>
       <div>
         <motion.ul ref={ref} variants={ul} animate={animation} className={styles.container}>
           <motion.li variants={li}>

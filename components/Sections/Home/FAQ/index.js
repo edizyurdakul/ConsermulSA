@@ -47,7 +47,6 @@ const FrequentlyAskedQuestions = () => {
         <motion.div variants={li} className={styles.divider}></motion.div>
       </motion.div>
       <motion.div variants={ul} animate={animation} className={styles.container}>
-        <motion.h2 variants={li}>Frequently Asked Questions</motion.h2>
         <motion.h3 variants={li} className={styles.question}>
           What questions do your clients usually ask?
         </motion.h3>
@@ -59,7 +58,6 @@ const FrequentlyAskedQuestions = () => {
         <motion.div variants={li} className={styles.divider}></motion.div>
       </motion.div>
       <motion.div variants={ul} animate={animation} className={styles.container}>
-        <motion.h2 variants={li}>Frequently Asked Questions</motion.h2>
         <motion.h3 variants={li} className={styles.question}>
           What questions do your clients usually ask?
         </motion.h3>
