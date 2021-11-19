@@ -36,17 +36,17 @@ export const Block = ({ title, paragraph }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div ref={ref} variants={ul} animate={animation} className={styles.container}>
-        <div variants={li} className={styles.left}>
+      <motion.div ref={ref} variants={ul} animate={animation} className={styles.container}>
+        <motion.div variants={li} className={styles.left}>
           <div className={styles.heroImage}>
             <NextImage src={"/placeholder.png"} layout="fill" />
           </div>
-        </div>
-        <div variants={li} className={styles.right}>
+        </motion.div>
+        <motion.div variants={li} className={styles.right}>
           <h2>{title}</h2>
           <p>{paragraph}</p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
