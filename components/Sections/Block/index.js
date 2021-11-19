@@ -1,5 +1,8 @@
-import styles from "./Block.module.scss";
 import NextImage from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import styles from "./Block.module.scss";
 
 export const Block = ({ title, paragraph }) => {
   const ul = {
@@ -80,17 +83,17 @@ export const BlockReverse = ({ title, paragraph }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div ref={ref} variants={ul} animate={animation} className={styles.container}>
-        <div variants={li} className={styles.left}>
+      <motion.div ref={ref} variants={ul} animate={animation} className={styles.container}>
+        <motion.div variants={li} className={styles.left}>
           <h2>{title}</h2>
           <p>{paragraph}</p>
-        </div>
-        <div variants={li} className={`${styles.right} ${styles.reverse}`}>
+        </motion.div>
+        <motion.div variants={li} className={`${styles.right} ${styles.reverse}`}>
           <div className={styles.heroImage}>
             <NextImage src={"/placeholder.png"} layout="fill" />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
