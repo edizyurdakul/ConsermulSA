@@ -33,8 +33,8 @@ const FrequentlyAskedQuestions = () => {
     }
   }, [inView]);
   return (
-    <div className={styles.wrapper}>
-      <motion.div variants={ul} animate={animation} ref={ref} className={styles.container}>
+    <div ref={ref} className={styles.wrapper}>
+      <motion.div variants={ul} animate={animation} className={styles.container}>
         <motion.h2 variants={li}>Frequently Asked Questions</motion.h2>
         <motion.h3 variants={li} className={styles.question}>
           What questions do your clients usually ask?

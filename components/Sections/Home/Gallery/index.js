@@ -1,24 +1,53 @@
-import styles from "./Gallery.module.scss";
 import NextImage from "next/image";
-
-import React from "react";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import styles from "./Gallery.module.scss";
 
 const Gallery = () => {
+  const ul = {
+    hidden: { opacity: 0, y: 36 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.35,
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  const li = {
+    hidden: { opacity: 0, y: 36 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("show");
+    }
+    if (!inView) {
+      animation.start("hidden");
+    }
+  }, [inView]);
   return (
     <div className={styles.wrapper}>
       <h2>Gallery</h2>
       <div>
-        <ul className={styles.container}>
-          <li>
+        <motion.ul ref={ref} variants={ul} animate={animation} className={styles.container}>
+          <motion.li variants={li}>
             <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="responsive" objectFit="cover" />
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={li}>
             <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="fill" objectFit="cover" />
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={li}>
             <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="responsive" objectFit="cover" />
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
     </div>
   );

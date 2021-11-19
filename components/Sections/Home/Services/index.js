@@ -32,7 +32,7 @@ const Services = () => {
   };
 
   const animation = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   useEffect(() => {
     if (inView) {
@@ -44,8 +44,8 @@ const Services = () => {
   }, [inView]);
   return (
     <>
-      <div className={styles.wrapper}>
-        <div ref={ref} className={styles.contentWrapper}>
+      <div ref={ref} className={styles.wrapper}>
+        <div className={styles.contentWrapper}>
           <motion.h2 variants={heading} animate={animation}>
             Services
           </motion.h2>
