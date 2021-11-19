@@ -55,7 +55,7 @@ const Gallery = () => {
             <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="responsive" objectFit="cover" />
           </motion.li>
           <motion.li variants={li}>
-            <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="fill" objectFit="cover" />
+            <NextImage src={"/placeholder.png"} layout="fill" objectFit="cover" />
           </motion.li>
           <motion.li variants={li}>
             <NextImage src={"/placeholder.png"} width="100%" height="100%" layout="responsive" objectFit="cover" />
