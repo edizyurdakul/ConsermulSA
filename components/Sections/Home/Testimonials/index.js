@@ -32,7 +32,7 @@ const Testimonials = () => {
   };
 
   const animation = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   useEffect(() => {
     if (inView) {
