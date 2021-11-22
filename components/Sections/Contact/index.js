@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styles from "./Contact.module.scss";
 
 const Contact = () => {
@@ -16,27 +17,52 @@ const Contact = () => {
       body: JSON.stringify(formData),
     });
   }
+
+  const ul = {
+    hidden: { opacity: 0, y: 36 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.25,
+        delayChildren: 0.35,
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const li = {
+    hidden: { opacity: 0, y: 36 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
     <div className={styles.wrapper}>
-      <h1>Get In Touch</h1>
-
-      <form onSubmit={handleOnSubmit} className={styles.container}>
+      <motion.h1 initial={{ opacity: 0, y: 36 }} transition={{ transition: { delay: 0.15 } }} animate={{ opacity: 1, y: 0 }}>
+        Get In Touch
+      </motion.h1>
+      <motion.form variants={ul} initial="hidden" animate="show" onSubmit={handleOnSubmit} className={styles.container}>
         <p>
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" name="name" />
+          <motion.label variants={li} htmlFor="name">
+            Name
+          </motion.label>
+          <motion.input variants={li} id="name" type="text" name="name" />
         </p>
         <p>
-          <label htmlFor="email">Email</label>
-          <input id="email" type="text" name="email" />
+          <motion.label variants={li} htmlFor="email">
+            Email
+          </motion.label>
+          <motion.input variants={li} id="email" type="text" name="email" />
         </p>
         <p>
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" />
+          <motion.label variants={li} htmlFor="message">
+            Message
+          </motion.label>
+          <motion.textarea variants={li} id="message" name="message" />
         </p>
         <p>
-          <button>Submit</button>
+          <motion.button variants={li}>Submit</motion.button>
         </p>
-      </form>
+      </motion.form>
     </div>
   );
 };

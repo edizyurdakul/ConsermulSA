@@ -6,7 +6,6 @@ export { default as Numbers } from "./Numbers";
 export { default as Testimonials } from "./Home/Testimonials";
 export { default as Gallery } from "./Home/Gallery";
 export { default as FAQ } from "./Home/FAQ";
-export { default as Team } from "./Team";
 export { default as CommonHero } from "./CommonHero";
 export { Block, BlockReverse } from "./Block";
 export { default as Contact } from "./Contact";

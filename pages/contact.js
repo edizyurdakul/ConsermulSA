@@ -3,8 +3,9 @@ import { Contact } from "../components/Sections";
 const ContactPage = () => {
   return (
     <main>
-      Work in progress
-      <Contact />
+      <section>
+        <Contact />
+      </section>
     </main>
   );
 };
