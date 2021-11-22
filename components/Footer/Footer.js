@@ -38,11 +38,13 @@ const Footer = () => {
   return (
     <footer className={styles.wrapper}>
       <div className={styles.container}>
-        <NextLink passHref href="/">
-          <a className={styles.logo}>
-            <NextImage src={"/Logo.png"} width="150px" height="116px" />
-          </a>
-        </NextLink>
+        <div className={styles.logo}>
+          <NextLink passHref href="/">
+            <a>
+              <NextImage src={"/Logo.png"} width="150px" height="116px" />
+            </a>
+          </NextLink>
+        </div>
         <motion.ul variants={ul} animate={animation} ref={ref}>
           <motion.li variants={li}>
             <h4>COMPANY</h4>

@@ -9,3 +9,4 @@ export { default as FAQ } from "./Home/FAQ";
 export { default as Team } from "./Team";
 export { default as CommonHero } from "./CommonHero";
 export { Block, BlockReverse } from "./Block";
+export { default as Contact } from "./Contact";
