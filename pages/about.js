@@ -1,4 +1,4 @@
-import { HomeAbout, CallToAction, Team, CommonHero, Block, BlockReverse } from "../components/Sections";
+import { HomeAbout, CallToAction, CommonHero, Block, BlockReverse } from "../components/Sections";
 
 const AboutPage = () => {
   return (
@@ -26,9 +26,7 @@ const AboutPage = () => {
             attention to the tone of voice. Try to win the customers' trust by being positive"
         />
       </section>
-      <section>
-        <Team />
-      </section>
+
       <section>
         <CallToAction />
       </section>
