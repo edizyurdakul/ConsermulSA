@@ -48,17 +48,17 @@ const Footer = () => {
         <motion.ul variants={ul} animate={animation} ref={ref}>
           <motion.li variants={li}>
             <h4>COMPANY</h4>
-            <NextLink href="#">About our company</NextLink>
-            <NextLink href="#">Our previous works</NextLink>
+            <NextLink href="/about">About our company</NextLink>
+            <NextLink href="/projects">Our previous works</NextLink>
           </motion.li>
           <motion.li variants={li}>
             <h4>SERVICES</h4>
-            <NextLink href="#">Services we provide</NextLink>
-            <NextLink href="#">Request a quote</NextLink>
+            <NextLink href="/services">Services we provide</NextLink>
+            <NextLink href="/contact">Request a quote</NextLink>
           </motion.li>
           <motion.li variants={li}>
             <h4>HELP</h4>
-            <NextLink href="#">Contact</NextLink>
+            <NextLink href="/contact">Contact</NextLink>
             <div className={styles.social}>
               <NextLink href="#">
                 <div>

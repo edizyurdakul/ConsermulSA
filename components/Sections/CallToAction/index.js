@@ -42,7 +42,7 @@ const CallToAction = () => {
         </motion.div>
         <motion.div variants={li} className={styles.right}>
           <p>Provide some assertive title that would persuade customers to take some action, e.g, making a call, etc.</p>
-          <Button text="Get A Quote" link="/contact" />
+          <Button text="Phone Call" link="tel:+507 6501-3102" />
         </motion.div>
       </motion.div>
     </div>

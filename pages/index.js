@@ -6,13 +6,13 @@ const HomePage = () => {
     <>
       <Head>
         <meta charset="utf-8" />
-        <title>Consermul SA | </title>
-        <meta name="description" content="Description" />
-
-        <meta property="og:title" content="Social Title" />
-        <meta property="og:type" content="Social Type" />
-        <meta property="og:url" content="Social Url" />
-        <meta property="og:image" content="Social Img" />
+        <title>Consermul SA | Es Una Empresa de Consultoria, Mantenimiento y Construcción </title>
+        <meta name="description" content="Empresa de Consultoria, Mantenimiento y Construcción" />
+        <meta property="og:title" content="Consermul SA" />
+        <meta property="og:description" content="Es Una Empresa de Consultoria, Mantenimiento y Construcción" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.consermulsa.com/" />
+        <meta property="og:image" content="Logo.png" />
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon-192x192.png" type="image/svg+xml" />
