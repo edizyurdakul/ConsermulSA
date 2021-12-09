@@ -32,7 +32,7 @@ const HomeHero = () => {
           <motion.p variants={li}>
             storytelling in business has become a field in its own right as industries has grown
           </motion.p>
-          <MButton variants={li} text="Contact" />
+          <MButton variants={li} text="Contact" link="/contact" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0.25, x: 200 }}

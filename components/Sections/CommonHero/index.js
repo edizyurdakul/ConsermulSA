@@ -32,7 +32,7 @@ const CommonHero = ({ title, paragraph, calltoaction, noAction }) => {
           </motion.div>
           <motion.div variants={li} className={styles.right}>
             <p>{paragraph}</p>
-            {noAction === "true" ? null : <Button text={calltoaction} />}
+            {noAction === "true" ? null : <Button text={calltoaction} link="/contact" />}
           </motion.div>
         </motion.div>
         <motion.div variants={ul} initial="hidden" animate="show" className={styles.heroImage}>

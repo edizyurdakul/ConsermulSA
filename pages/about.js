@@ -26,7 +26,6 @@ const AboutPage = () => {
             attention to the tone of voice. Try to win the customers' trust by being positive"
         />
       </section>
-
       <section>
         <CallToAction />
       </section>

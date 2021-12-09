@@ -50,7 +50,7 @@ const About = () => {
         <motion.div ref={ref} variants={ul} animate={animation} className={styles.container}>
           <motion.div variants={li} className={styles.left}>
             <h2>Medium length title for building block</h2>
-            <Button text="Button" />
+            <Button text="Get In Touch" link="/contact" />
           </motion.div>
           <motion.div variants={li} className={styles.right}>
             <p>
